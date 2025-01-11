@@ -1,5 +1,6 @@
 <H1>Welcome to Kittens API</H1>
 <p>Relax and enjoy some kittens</p>
+<p><%= link_to "Make a new kitten", new_kitten_path %></p>
 
 <div id ="kitten-index">
     <% @kittens.each do |kitten| %>
@@ -14,6 +15,12 @@
             <p id="softness">
                 Softness Rating: <%= kitten.softness %><br>
             </p>
+            <div>
+                <%= link_to "Give up this Kitten", kitten_path(kitten.id), data: {turbo_confirm: 'Are you sure you want to put this kitten up for adoption?', turbo_method: :delete } %> 
+            </div>  
+            <div>
+                <%= link_to "Edit This Kitten", edit_kitten_path(kitten.id) %> 
+            </div>
         </div>
         <% end %>
 </div>
