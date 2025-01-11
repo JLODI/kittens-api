@@ -1,0 +1,7 @@
+<div id="flash-messages">
+  <% flash.each do |type, message| %>
+    <div class="alert alert-<%= type %>">
+      <%= message.html_safe %>
+    </div>
+  <% end %>
+</div>

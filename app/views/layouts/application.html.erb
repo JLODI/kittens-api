@@ -9,7 +9,7 @@
     <%= csp_meta_tag %>
 
     <%= yield :head %>
-
+    <%= render partial: 'layouts/flash_message' %>
     <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
     <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
 
