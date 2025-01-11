@@ -1,0 +1,11 @@
+<%= form_with model: @kitten do |form| %>
+    <%= form.label "Kitten Name" %><br>
+    <%= form.text_field :name, placeholder: 'Your Kitten name here', value: @kitten.name %><br>
+    <%= form.label "Age" %>
+    <%= form.text_field  :age, placeholder: '0', age: @kitten.age  %><br />
+    <%= form.label "Cuteness Rating (5 is the highest)" %>
+    <%= form.select :cuteness, (1..5), value: @kitten.cuteness  %><br />
+    <%= form.label "Softness Rating (5 is the highest)" %>
+    <%= form.select :softness, (1..5), value: @kitten.softness  %><br />
+    <%= form.submit value:"Submit Kitten" %>
+<% end %>

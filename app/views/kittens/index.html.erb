@@ -1,1 +1,19 @@
 <H1>Welcome to Kittens API</H1>
+<p>Relax and enjoy some kittens</p>
+
+<div id ="kitten-index">
+    <% @kittens.each do |kitten| %>
+        <div id="kitten">
+            <h3 id="kitten-name">
+                <%= link_to kitten.name, kitten %><br>
+            </h3>
+            <h4 id="age">Age: <%= kitten.age %></h4> 
+            <p id="cuteness">
+                 Cuteness Rating: <%= kitten.cuteness %><br>
+            </p>
+            <p id="softness">
+                Softness Rating: <%= kitten.softness %><br>
+            </p>
+        </div>
+        <% end %>
+</div>
