@@ -17,4 +17,7 @@
     <div>
         <%= link_to "Give up this Kitten", kitten_path(@kitten.id), data: {turbo_confirm: 'Are you sure you want to put this kitten up for adoption?', turbo_method: :delete } %> 
     </div>
+    <div>
+        <%= link_to "Return to Kittens index", kittens_path %> 
+    </div>
 </div>
